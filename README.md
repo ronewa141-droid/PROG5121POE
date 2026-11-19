@@ -38,6 +38,16 @@ PROJECT STRUCTURE
 - JUnit	test	classs
 
 
+IMPORTANT METHODS 
+
+- checkUserName(String) 
+- checkPasswordComplexity(String) 
+- checkCellPhoneNumber(String)
+- registerUser(...) 
+- loginUser(String,	String)
+- returnLoginStatus(boolean) 
+
+
 TECHNOLOGIES USED 
 
 - Java	(developed	and	tested	in	NetBeans	IDE)
@@ -114,6 +124,69 @@ RUNNING THE TESTS
 choose	Test	to	run	everything.
 
 
+Part 3: ARRAYS, JSON and STORED MESSAGES 
+
+1. Arrays	–	separate	lists	for	sent	messages,	disregarded	messages,	stored	messages,	message	hashes	and
+message	IDs.
+
+2. JSON	storage	–	stored	messages	are	written	to	storedMessages.json .	When	the	program	starts,	the	file	is	read back	into	the	stored	messages	array.
+   
+3.Stored	Messages	menu	(main	menu	option	4):
+a)	Display	the	sender	and	recipient	of	all	stored	messages
+b)	Display	the	longest	stored	message
+c)	Search	for	a	message	ID	and	display	the	recipient	and	message
+d)	Search	for	all	the	messages	stored	for	a	particular	recipient
+e)	Delete	a	message	using	its	message	hash
+f)	Display	a	report	of	all	the	stored	messages
+g)	Back	to	the	main	menu
+
+PROJECT STRUCTURE
+
+- Login/																															
+--main/java/com/mycompany/login/
+- Login.java										
+- Main.java																				
+- Message.java																		
+- QuickChatApp.java																	
+- test/java/com/mycompany/login
+- LoginTest.java																	
+- MessageTest.java														
+- StoredMessagesTest.java						
+
+
+IMPORTANT METHODS 
+
+- checkMessageID() 
+- checkRecipientCell()
+- checkMessageLengthResult() 
+- createMessageHash() 
+- sentMessage(int) 
+- storeMessage() 
+- loadStoredMessages() 
+- longestMessage()	/	longestStoredMessage() 
+- searchByMessageId(String) 
+- searchByRecipient(String) 
+- deleteByHash(String) 
+- displaySentReport()	/	displayStoredReport()
+
+
+TECHNOLOGIES USED 
+
+- Java
+- Apache	Maven
+- NetBeans	IDE
+- JUnit	4	for	unit	testing
+
+HOW TO RUN 
+
+1.	Right-click	the	project	and	choose	Clean	and	Build.
+2.	Right-click	QuickChatApp.java	and	choose	Run	File.
+3.	Register,	log	in,	enter	how	many	messages	you	want	to	send,	then	use	the	menu.
+The	application	creates	storedMessages.json	in	the	project	folder	the	first	time	a	message	is	stored.
+
+HOW TO RUN TESTS 
+
+- Right-click	the	project	and	choose	Test	(or	press	Alt+F6 ).	To	run	one	file,	right-click	it	under	Test	Packages	and	choose Test file 
 
 
 
